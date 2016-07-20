@@ -32,6 +32,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+  .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html'
+        }
+      }
+    })
+
   .state('app.cadastrar', {
     url: '/cadastrar',
     views: {
@@ -49,7 +58,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.sobre', {
+
+  .state('app.sobre', {
         url: '/sobre',
         views: {
           'menuContent': {
