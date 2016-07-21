@@ -2,3 +2,21 @@
 #obrigatoriaCad {
   padding-left: 15px;
 }
+div.hora {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0;
+  text-align: center;
+}
+#container {
+  display: flex;
+  justify-content: space-around;
+}
+#description {
+  padding: 3px;
+  height: 90px;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  resize: none;
+}

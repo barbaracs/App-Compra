@@ -1,0 +1,49 @@
+<ion-view view-title="Novo Anuncio">
+  <ion-content>
+    <!-- Dados do Anuncio -->
+    <div class="dadosCad">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Titulo</span>
+        <input type="text" placeholder="Ex: Bolo">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Local</span>
+        <input type="text" placeholder="Ex: R.U.">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Preço</span>
+        <input type="text" placeholder="Ex: 0,00">
+      </label>
+      <div class="hora">
+        <label>Periodo</label>
+        <div id="container">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Inicio</span>
+            <input type="text" placeholder="08:00">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Termino</span>
+            <input type="text" placeholder="23:00">
+          </label>
+        </div>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Descrição</span>
+        <textarea id="description"></textarea>
+      </label>
+      <div id="container">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">TAG</span>
+          <input type="text" placeholder="Ex: Brigadeiro">
+        </label>
+        <button class="button button-block button-dark"
+        style="padding:5px;width:5%;">+</button>
+      </div>
+      <label class="item">
+        <button class="button button-block button-dark" type="submit">
+        Publicar</button>
+      </label>
+    </div>
+    <!-- * -->
+  </ion-contente>
+</ion-view>
