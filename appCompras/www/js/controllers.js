@@ -9,6 +9,7 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+<<<<<<< HEAD
   //   function MyCtrl($scope, $ionicHistory) {
   //     $scope.myGoBack = function() {
   //       $ionicHistory.goBack();
@@ -45,6 +46,8 @@ angular.module('starter.controllers', [])
         $scope.closeLogin();
       }, 1000);
     };
+=======
+>>>>>>> 1ee881d0519903f3d33c293131a32843e210f4eb
 })
 
 .controller('PlaylistsCtrl', function($scope) {
@@ -58,5 +61,14 @@ angular.module('starter.controllers', [])
   //];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('CadastroCtrl', function($scope, $cordovaCamera, $cordovaFile) {
+    $scope.images = [];
+
+    $scope.addImage = function() {
+      console.log("add image");
+    }
+
+    $scope.urlForImage = function(imageName) {
+        console.log("get correct path for image");
+    }
 });
