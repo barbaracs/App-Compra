@@ -23,5 +23,14 @@ angular.module('starter.controllers', [])
   //];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('CadastroCtrl', function($scope, $cordovaCamera, $cordovaFile) {
+    $scope.images = [];
+
+    $scope.addImage = function() {
+      console.log("add image");
+    }
+
+    $scope.urlForImage = function(imageName) {
+        console.log("get correct path for image");
+    }
 });

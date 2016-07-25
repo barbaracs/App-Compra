@@ -1,4 +1,15 @@
 /* Empty. Add your own CSS if you like */
+
+/* *obrigatorios do cadastro */
 #obrigatoriaCad {
   padding-left: 15px;
+}
+
+/* Imagem do logo no menu*/
+#imgLogo {
+  width:90px;
+  height:90px;
+  padding: 10px;
+  position: relative;
+  left:33%;
 }

@@ -1,7 +1,10 @@
 <ion-view view-title="Cadastro">
+  <ion-nav-buttons side="right">
+    <img class="title-image" src="../img/logo.jpg" alt="404" />
+  </ion-nav-buttons>
   <ion-content>
     <!--Dados do Cadastro -->
-    <div class="dadosCad">
+    <div>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Nome Completo*</span>
         <input type="text" placeholder="Ex: Joao da Silva">
@@ -17,6 +20,13 @@
       <label class="item item-input item-stacked-label">
         <span class="input-label">Celular</span>
         <input type="text" placeholder="Ex: 11 96543-9876">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Foto</span>
+        <button class="button button-small button-stable" ng-click="addImage()">Adicionar foto</button>
+        <ion-scroll>
+	        <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px"/>
+        </ion-scroll>
       </label>
       <!--*-->
       <h6 id="obrigatoriaCad">*Campos obrigatórios</h6>
