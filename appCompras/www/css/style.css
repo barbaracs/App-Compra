@@ -20,3 +20,39 @@ div.hora {
   overflow: hidden;
   resize: none;
 }
+
+/*LOGIN---------------------------------*/
+.botao-entrar{
+  padding-bottom: 0px;
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-top: 70px;
+}
+.botao-cadastrar{
+  padding-bottom: 0px;
+  padding-left: 115px;
+  padding-right: 110px;
+  padding-top: 20px;
+}
+.usuario{
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 150px;
+}
+.senha{
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+/*MeusAnuncios---------------------------------*/
+button.botao:before{
+  font-size: 10px;
+  color : blue;
+}
+.card-small{
+  width:120px;
+  height: 10px;
+}

@@ -59,6 +59,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.meusAnuncios', {
+        url: '/meusAnuncios',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/meusAnuncios.html'
+          }
+        }
+      })
     .state('app.inserirAnuncio', {
         url: '/inserirAnuncio',
         views: {
