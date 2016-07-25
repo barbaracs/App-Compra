@@ -40,7 +40,6 @@ div.hora {
   resize: none;
 }
 
-<<<<<<< HEAD
 /*LOGIN---------------------------------*/
 .botao-entrar{
   padding-bottom: 0px;
@@ -75,7 +74,7 @@ button.botao:before{
 .card-small{
   width:120px;
   height: 10px;
-=======
+
 /*Imagem do Logo na tela Sobre */
 #imgLogoSobre {
   width:110px;
@@ -88,5 +87,4 @@ button.botao:before{
   width: 120px;
   height: 120px;
   position: relative;
->>>>>>> 1ee881d0519903f3d33c293131a32843e210f4eb
 }

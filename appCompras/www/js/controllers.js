@@ -9,7 +9,6 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-<<<<<<< HEAD
   //   function MyCtrl($scope, $ionicHistory) {
   //     $scope.myGoBack = function() {
   //       $ionicHistory.goBack();
@@ -46,8 +45,6 @@ angular.module('starter.controllers', [])
         $scope.closeLogin();
       }, 1000);
     };
-=======
->>>>>>> 1ee881d0519903f3d33c293131a32843e210f4eb
 })
 
 .controller('PlaylistsCtrl', function($scope) {
