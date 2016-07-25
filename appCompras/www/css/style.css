@@ -14,6 +14,11 @@
   left:33%;
 }
 
+/* Imagem do logo na barra*/
+#logoBarra {
+  max-width: 32px;
+}
+
 div.hora {
   padding: 10px;
   border: 1px solid gray;
@@ -33,4 +38,18 @@ div.hora {
   line-height: 24px;
   overflow: hidden;
   resize: none;
+}
+
+/*Imagem do Logo na tela Sobre */
+#imgLogoSobre {
+  width:110px;
+  height:110px;
+  position: relative;
+  left: 40%;
+}
+/*Imagem do Logo do LTIA na tela Sobre */
+#imgLtiaSobre {
+  width: 120px;
+  height: 120px;
+  position: relative;
 }
