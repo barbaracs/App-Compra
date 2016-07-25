@@ -60,6 +60,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.inserirAnuncio', {
+        url: '/inserirAnuncio',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/inserirAnuncio.html'
+          }
+        }
+      })
+
   .state('app.sobre', {
         url: '/sobre',
         views: {
