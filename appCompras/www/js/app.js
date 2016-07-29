@@ -60,6 +60,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.meusAnuncios', {
+        url: '/meusAnuncios',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/meusAnuncios.html'
+          }
+        }
+      })
     .state('app.inserirAnuncio', {
         url: '/inserirAnuncio',
         views: {
@@ -78,27 +86,33 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       })
 
-    .state('app.playlists', { //playlists
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+  .state('app.anuncios.hoje', {
+        url: '/hoje',
+        views: {
+          'hoje': {
+            templateUrl: 'templates/hoje.html'
+          }
         }
-      }
-    })
+      })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+  .state('app.anuncios.todos', {
+        url: '/todos',
+        views: {
+          'todos': {
+            templateUrl: 'templates/todos.html'
+          }
+        }
+      })
+
+  .state('app.anuncios.tags', {
+        url: '/tags',
+        views: {
+          'tags': {
+            templateUrl: 'templates/tags.html'
+          }
+        }
+      })
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/anuncios');
-
-
+  $urlRouterProvider.otherwise('/app/anuncios/hoje');
 });

@@ -1,5 +1,11 @@
-<ion-view view-title="Anuncios">
-  <ion-content>
-    <h1>Anuncios</h1>
-  </ion-content>
-</ion-view>
+<ion-tabs class="tabs-striped tabs-top">
+  <ion-tab title="Hoje" href="#/app/anuncios/hoje">
+      <ion-nav-view name="hoje"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Todos" href="#/app/anuncios/todos">
+      <ion-nav-view name="todos"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Tags" href="#/app/anuncios/tags">
+      <ion-nav-view name="tags"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>
