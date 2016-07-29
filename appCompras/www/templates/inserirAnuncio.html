@@ -1,6 +1,6 @@
 <ion-view view-title="Novo Anuncio">
   <ion-nav-buttons side="right">
-      <img class="title-image" src=".../ionic-logo-white.svg" alt="404" />
+    <img class="title-image" src="../img/logo.jpg" id="logoBarra" />
   </ion-nav-buttons>
   <ion-content>
     <!-- Dados do Anuncio -->
@@ -34,14 +34,15 @@
         <span class="input-label">Descrição</span>
         <textarea id="textAreaMultLine"></textarea>
       </label>
-      <div id="LadoALado">
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">TAG</span>
+      <label class="item item-input item-stacked-label">
+        <button ng-click="addfield()"
+        class="button button-block button-dark"
+        style="padding:3px;width:20%;">AddTag</button>
+        <input type="text" placeholder="Ex: Brigadeiro">
+        <div ng-repeat="item in inputs">
           <input type="text" placeholder="Ex: Brigadeiro">
-        </label>
-        <button class="button button-block button-dark"
-        style="padding:5px;width:5%;">+</button>
-      </div>
+        </div>
+      </label>
       <label class="item">
         <button class="button button-block button-dark" type="submit">
         Publicar</button>

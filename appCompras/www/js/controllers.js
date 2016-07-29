@@ -45,6 +45,12 @@ angular.module('starter.controllers', [])
         $scope.closeLogin();
       }, 1000);
     };
+
+    //Cria novos inputs para adicionar tags
+    $scope.inputs = [];
+    $scope.addfield = function () {
+        $scope.inputs.push({})
+    };
 })
 
 .controller('PlaylistsCtrl', function($scope) {
