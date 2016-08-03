@@ -45,6 +45,11 @@ angular.module('starter.controllers', [])
         $scope.closeLogin();
       }, 1000);
     };
+//CADASTRO DE USUARIO
+    $scope.cadastroUsuario = function(cadastro){
+      console.log(cadastro);
+    };
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {
@@ -67,5 +72,11 @@ angular.module('starter.controllers', [])
 
     $scope.urlForImage = function(imageName) {
         console.log("get correct path for image");
+    }
+
+    //Parte de pegar dados do cadastro
+    getData();
+    $scope.cadastroUsuario = function(cadastro){
+      console.log(cadastro);
     }
 });

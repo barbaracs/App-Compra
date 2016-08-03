@@ -33,7 +33,7 @@ div.hora {
   display: flex;
   justify-content: space-around;
 }
-/*Redimensiona a textArea automaticamente e permite a 
+/*Redimensiona a textArea automaticamente e permite a
 utilização de multiplas linhas*/
 #textAreaMultLine {
   padding: 3px;
@@ -79,17 +79,18 @@ button.botao:before{
 .card-small{
   width:120px;
   height: 10px;
-
+}
+/* Tela Sobre*/
+/*Imagem do Logo do LTIA na tela Sobre */
+#imgLtiaSobre {
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
 /*Imagem do Logo na tela Sobre */
-#imgLogoSobre {
+#imgLogoSobre{
   width:110px;
   height:110px;
   position: relative;
   left: 40%;
-}
-/*Imagem do Logo do LTIA na tela Sobre */
-#imgLtiaSobre {
-  width: 120px;
-  height: 120px;
-  position: relative;
 }

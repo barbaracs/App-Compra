@@ -7,19 +7,19 @@
     <div>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Nome Completo*</span>
-        <input type="text" placeholder="Ex: Joao da Silva">
+        <input type="text" placeholder="Ex: Joao da Silva" ng-model="cadastro.nome">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Nome do Usuário*</span>
-        <input type="text" placeholder="Ex: JoaoSilva">
+        <input type="text" placeholder="Ex: JoaoSilva" ng-model="cadastro.nomeUsuario">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Senha*</span>
-        <input type="text" placeholder="Ex: joao1234">
+        <input type="text" placeholder="Ex: joao1234" ng-model="cadastro.senha">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Celular</span>
-        <input type="text" placeholder="Ex: 11 96543-9876">
+        <input type="text" placeholder="Ex: 11 96543-9876" ng-model="cadastro.cel">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Foto</span>
@@ -32,7 +32,7 @@
       <h6 id="obrigatoriaCad">*Campos obrigatórios</h6>
       <!-- Botao -->
       <label class="item">
-        <button class="button button-block button-dark" type="submit">Cadastrar</button>
+        <button class="button button-block button-dark" ng-click="cadastroUsuario(cadastro)">Cadastrar</button>
       </label>
     </div>
   </ion-content>

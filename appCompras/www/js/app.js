@@ -46,7 +46,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/cadastrar.html'
-      //  controller: 'CadastroCtrl'
       }
     }
   })
