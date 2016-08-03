@@ -50,6 +50,11 @@ angular.module('starter.controllers', [])
       console.log(cadastro);
     };
 
+    //Cria novos inputs para adicionar tags
+    $scope.inputs = [];
+    $scope.addfield = function () {
+        $scope.inputs.push({})
+    };
 })
 
 .controller('PlaylistsCtrl', function($scope) {
