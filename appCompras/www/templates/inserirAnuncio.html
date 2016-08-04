@@ -34,15 +34,24 @@
         <span class="input-label">Descrição</span>
         <textarea id="textAreaMultLine"></textarea>
       </label>
-      <label class="item item-input item-stacked-label">
-        <button ng-click="addfield()"
+      <div class="item-input" ng-repeat="item in inputs">
+        <label class="item item-input item-stacked-label">
+            <input type="text" placeholder="Ex: Brigadeiro"
+            ng-model="input.value" />
+        </label>
+        <button ng-if="$index == inputs.length - 1"
+        ng-click="addfield()"
         class="button button-block button-dark"
-        style="padding:3px;width:20%;">AddTag</button>
-        <input type="text" placeholder="Ex: Brigadeiro">
-        <div ng-repeat="item in inputs">
-          <input type="text" placeholder="Ex: Brigadeiro">
-        </div>
-      </label>
+        style="padding:3px;width:10%;">
+          <i class="icon ion-plus"></i>
+        </button>
+        <button ng-if="$index != inputs.length - 1"
+        ng-click="removefield($index)"
+        class="button button-block button-dark"
+        style="padding:3px;width:10%;">
+          <i class="icon ion-minus"></i>
+        </button>
+    </div>
       <label class="item">
         <button class="button button-block button-dark" type="submit">
         Publicar</button>

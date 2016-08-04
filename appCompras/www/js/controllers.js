@@ -45,16 +45,19 @@ angular.module('starter.controllers', [])
         $scope.closeLogin();
       }, 1000);
     };
-//CADASTRO DE USUARIO
+    //CADASTRO DE USUARIO
     $scope.cadastroUsuario = function(cadastro){
       console.log(cadastro);
     };
 
-    //Cria novos inputs para adicionar tags
-    $scope.inputs = [];
+    //Cria e deletar novos inputs de tags
+    $scope.inputs = [{value: null}];
     $scope.addfield = function () {
-        $scope.inputs.push({})
-    };
+        $scope.inputs.push({value: null});
+    }
+    $scope.removefield = function (index) {
+    $scope.inputs.splice(index, 1);
+    }
 })
 
 .controller('PlaylistsCtrl', function($scope) {
