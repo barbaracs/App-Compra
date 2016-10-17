@@ -1,39 +1,41 @@
 <ion-view view-title="Cadastro">
   <ion-nav-buttons side="right">
     <img class="title-image" src="../img/logo.jpg" id="logoBarra" />
-    </ion-nav-buttons>
+  </ion-nav-buttons>
   <ion-content>
     <!--Dados do Cadastro -->
-    <div>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Nome Completo*</span>
-        <input type="text" placeholder="Ex: Joao da Silva" ng-model="cadastro.nome">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Nome do Usuário*</span>
-        <input type="text" placeholder="Ex: JoaoSilva" ng-model="cadastro.nomeUsuario">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Senha*</span>
-        <input type="text" placeholder="Ex: joao1234" ng-model="cadastro.senha">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Celular</span>
-        <input type="text" placeholder="Ex: 11 96543-9876" ng-model="cadastro.cel">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Foto</span>
-        <button class="button button-small button-stable" ng-click="addImage()">Adicionar foto</button>
-        <ion-scroll>
-	        <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px"/>
-        </ion-scroll>
-      </label>
-      <!--*-->
-      <h6 id="obrigatoriaCad">*Campos obrigatórios</h6>
-      <!-- Botao -->
-      <label class="item">
-        <button class="button button-block button-dark" ng-click="cadastroUsuario(cadastro)">Cadastrar</button>
-      </label>
+    <div ng-controller="AppCtrl">
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Nome Completo*</span>
+          <input type="text" placeholder="Ex: Joao da Silva" ng-model="cadastro.nome">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Nome do Usuário*</span>
+          <input type="text" placeholder="Ex: JoaoSilva" ng-model="cadastro.nomeUsuario">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Senha*</span>
+          <input type="text" placeholder="Ex: joao1234" ng-model="cadastro.senha">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Celular</span>
+          <input type="text" placeholder="Ex: 11 96543-9876" ng-model="cadastro.cel">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Foto</span>
+          <button class="button button-small button-stable" ng-click="addImage()">Adicionar foto</button>
+          <ion-scroll>
+  	        <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px"/>
+          </ion-scroll>
+          </label>
+        <!--*-->
+        <h6 id="obrigatoriaCad">*Campos obrigatórios</h6>
+        <!-- Botao -->
+        <label class="item">
+          <button class="button button-block button-dark" ng-click="cadastroUsuario()">Cadastrar</button>
+        </label>
+
     </div>
   </ion-content>
 </ion-view>
