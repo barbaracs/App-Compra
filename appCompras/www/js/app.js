@@ -45,7 +45,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/cadastrar',
     views: {
       'menuContent': {
-        templateUrl: 'templates/cadastrar.html'
+        templateUrl: 'templates/cadastrar.html',
+        controller: 'CtrlCadastroUsuario'
       }
     }
   })
