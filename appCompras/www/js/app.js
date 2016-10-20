@@ -68,11 +68,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           }
         }
       })
-    .state('app.inserirAnuncio', {
+    .state('app.novoAnuncio', {
         url: '/inserirAnuncio',
         views: {
           'menuContent': {
-            templateUrl: 'templates/inserirAnuncio.html'
+            templateUrl: 'templates/novoAnuncio.html',
+            controller: 'CtrlNovoAnuncio'
           }
         }
       })

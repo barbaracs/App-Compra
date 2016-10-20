@@ -7,37 +7,37 @@
     <div class="dadosCad">
       <label class="item item-input item-stacked-label">
         <span class="input-label">Titulo</span>
-        <input type="text" placeholder="Ex: Bolo">
+        <input type="text" placeholder="Ex: Bolo" ng-model="nanuncio.titulo">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Local</span>
-        <input type="text" placeholder="Ex: R.U.">
+        <input type="text" placeholder="Ex: R.U." ng-model="nanuncio.local">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Preço</span>
-        <input type="text" placeholder="Ex: 0,00">
+        <input type="number" placeholder="Ex: 0,00" ng-model="nanuncio.preco">
       </label>
       <div class="hora">
         <label>Periodo</label>
         <div id="LadoALado">
           <label class="item item-input item-stacked-label">
             <span class="input-label">Inicio</span>
-            <input type="text" placeholder="08:00">
+            <input type="time" placeholder="08:00" ng-model="nanuncio.horainicio">
           </label>
           <label class="item item-input item-stacked-label">
             <span class="input-label">Termino</span>
-            <input type="text" placeholder="23:00">
+            <input type="time" placeholder="23:00" ng-model="nanuncio.horatermino">
           </label>
         </div>
       </div>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Descrição</span>
-        <textarea id="textAreaMultLine"></textarea>
+        <textarea id="textAreaMultLine" ng-model="nanuncio.descricao"></textarea>
       </label>
       <div class="item-input" ng-repeat="item in inputs">
         <label class="item item-input item-stacked-label">
-            <input type="text" placeholder="Ex: Brigadeiro"
-            ng-model="input.value" />
+            <input id="tag-{{$index}}" type="text" placeholder="Ex: Brigadeiro"
+            ng-model="input.tag"/>
         </label>
         <button ng-if="$index == inputs.length - 1"
         ng-click="addfield()"
@@ -53,8 +53,7 @@
         </button>
     </div>
       <label class="item">
-        <button class="button button-block button-dark" type="submit">
-        Publicar</button>
+        <button class="button button-block button-dark" ng-click="novoAnuncio()">Publicar</button>
       </label>
     </div>
     <!-- * -->
