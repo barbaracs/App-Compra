@@ -19,6 +19,16 @@
   max-width: 32px;
 }
 
+/*Detalhes do Anuncio*/
+/*Cria margens laterais na tela de detalhes do anuncio*/
+#MargemAnuncio {
+  margin: 5%;
+}
+/*Separa as Tags da Descriçaõ*/
+#Tags {
+  margin-top: 3%;
+}
+
 /*Inserir Anuncio*/
 /*Centraliza os labels e cria uma margem no espaço onde
 estão os campos de Periodo*/
@@ -26,10 +36,11 @@ div.hora {
   padding: 10px;
   border: 1px solid gray;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 /*Faz com que dois ou mais itens fiquem na mesma linha*/
 #LadoALado {
+  padding: 4px;
   display: flex;
   justify-content: space-around;
 }

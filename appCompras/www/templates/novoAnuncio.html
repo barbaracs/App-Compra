@@ -34,24 +34,25 @@
         <span class="input-label">Descrição</span>
         <textarea id="textAreaMultLine" ng-model="nanuncio.descricao"></textarea>
       </label>
-      <div class="item-input" ng-repeat="item in inputs">
-        <label class="item item-input item-stacked-label">
-            <input id="tag-{{$index}}" type="text" placeholder="Ex: Brigadeiro"
-            ng-model="input.tag"/>
-        </label>
-        <button ng-if="$index == inputs.length - 1"
-        ng-click="addfield()"
-        class="button button-block button-dark"
-        style="padding:3px;width:10%;">
-          <i class="icon ion-plus"></i>
-        </button>
-        <button ng-if="$index != inputs.length - 1"
-        ng-click="removefield($index)"
-        class="button button-block button-dark"
-        style="padding:3px;width:10%;">
-          <i class="icon ion-minus"></i>
-        </button>
-    </div>
+        <span class="input-label">Tags</span>
+        <div class="item-input" ng-repeat="item in inputs">
+          <label class="item item-input item-stacked-label">
+              <input id="tag-{{$index}}" type="text" placeholder="Ex: Brigadeiro"
+              ng-model="input.tag"/>
+          </label>
+          <button ng-if="$index == inputs.length - 1"
+          ng-click="addfield()"
+          class="button button-block button-dark"
+          style="padding:3px;width:10%;">
+            <i class="icon ion-plus"></i>
+          </button>
+          <button ng-if="$index != inputs.length - 1"
+          ng-click="removefield($index)"
+          class="button button-block button-dark"
+          style="padding:3px;width:10%;">
+            <i class="icon ion-minus"></i>
+          </button>
+        </div>
       <label class="item">
         <button class="button button-block button-dark" ng-click="novoAnuncio()">Publicar</button>
       </label>
