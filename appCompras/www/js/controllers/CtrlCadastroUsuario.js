@@ -25,6 +25,5 @@ $scope.cadastro ={};
       // this callback will be called asynchronously
       // when the response is available
     });
-    console.log(cadastro);
-  };
+  }
 });
