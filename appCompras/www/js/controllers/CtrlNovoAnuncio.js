@@ -1,7 +1,8 @@
-angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($scope, $state, $ionicPopup, $http) {
+angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($scope, $state, $ionicPopup, $http, $location) {
 
   $scope.nanuncio ={};
-  //Cria e deletar novos inputs de tags
+
+  //Cria e deleta novos inputs de tags
   $scope.inputs = [{
     value: null
   }];
@@ -14,13 +15,15 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
     $scope.inputs.splice(index, 1);
   }
   //CADASTRO DE USUARIO
-  $scope.novoAnuncio = function(cadastro) {
-    //console.log($scope.inputs);
+  $scope.novoAnuncio = function() {
+
     var tag = [];
     for (var i = 0; i < $scope.inputs.length; i++) {
       var valor = angular.element('#tag-' + i)[0].value;
-      tag.push(valor);
-    }
+      if (valor != "")
+        tag.push(valor);
+    };
+
     var datNAnuncio = $.param({
       dadosNAnuncio:{
         titulo: $scope.nanuncio.titulo,
@@ -33,6 +36,7 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
       }
     });
 
+
     //console.log(datNAnuncio);
     $http({
       method: 'POST',
@@ -41,6 +45,7 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       }
+
     })
     .then(function successCallback(datNAnuncio, statusN) {
       console.log(datNAnuncio);
@@ -58,6 +63,11 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
           }
         }).then(function successCallback(dadosTags, statusT) { console.log(dadosTags); });
       }
+
+    }).then(function successCallback(datNAnuncio, status) {
+      window.location.reload();
+      $location.path('#/app/meusAnuncios');
+
     });
   };
 

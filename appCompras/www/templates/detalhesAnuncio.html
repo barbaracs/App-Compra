@@ -1,0 +1,29 @@
+<ion-view>
+
+  <ion-nav-title>Anuncios</ion-nav-title>
+  <ion-nav-buttons side="right">
+    <img class="title-image" src="../img/logo.jpg" id="logoBarra" />
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div id="MargemAnuncio">
+      <h2 align="center"><b>{{anuncio[0].titulo}}</b></h2>
+      <div id="LadoALado">
+        <label>{{anuncio[0].publicado | date: 'dd/MM/yy'}}</label>
+        <label>R${{anuncio[0].preco.toFixed(2)}}</label>
+      </div>
+      <div id="LadoALado">
+        <label>{{anuncio[0].inicio | date: 'HH:mm'}}</label>
+        <label>{{anuncio[0].termino | date: 'HH:mm'}}</label>
+      </div>
+      <h4>{{anuncio[0].local}}</h4>
+      <div class="hora">{{anuncio[0].descricao}}</div>
+      <div id="Tags" ng-repeat="tags in anuncio">
+        <p>Tags</p>
+        <ui ng-repeat="tag in tags.tags">
+          <li>{{tag}}</li>
+        </ui>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

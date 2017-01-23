@@ -4,6 +4,34 @@
     <img class="title-image" src="../img/logo.jpg" id="logoBarra" />
   </ion-nav-buttons>
   <ion-content>
-  <p> Hello </p>
+    <div>
+      <div ng-repeat="anu in anuncios">
+        <a href="#/app/detalhesAnuncio" class ="item"
+        ng-click="verAnuncio(anu)">
+          <div class="row">
+            <div class="col col-20">
+              <p>{{anu.inicio | date:'HH:mm'}}</p>
+            </div>
+            <div class="col col-50 titulo">
+              <h2><b>{{anu.titulo}}</b></h2>
+            </div>
+            <div class="col-padding">
+              R${{anu.preco.toFixed(2)}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-20">
+              <p>{{anu.termino | date:'HH:mm'}}</p>
+            </div>
+            <div class="col col-50">
+              <h4>{{anu.descricao}}</h4>
+            </div>
+            <div>
+              Vendedor
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

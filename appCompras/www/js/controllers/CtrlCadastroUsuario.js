@@ -1,9 +1,9 @@
 angular.module('starter.controllers').controller('CtrlCadastroUsuario', function($scope, $state, $ionicPopup, $http) {
 
-$scope.cadastro ={};
+  $scope.cadastro ={};
 
   //CADASTRO DE USUARIO
-  $scope.cadastroUsuario = function(cadastro) {
+  $scope.cadastroUsuario = function() {
     var datUsu = $.param({
       dadosUsu:{
         nome: $scope.cadastro.nome,
@@ -21,9 +21,10 @@ $scope.cadastro ={};
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     }).then(function successCallback(datUsu, status) {
-      console.log(datUsu);
       // this callback will be called asynchronously
       // when the response is available
     });
-  }
+
+  };
+
 });
