@@ -7,7 +7,8 @@
     <div class="dadosCad">
       <label class="item item-input item-stacked-label">
         <span class="input-label">Titulo</span>
-        <input type="text" placeholder="Ex: Bolo" ng-model="nanuncio.titulo">
+        <input type="text" ng-keypress="onlyLetters()" placeholder="Ex: Bolo"
+         ng-model="nanuncio.titulo">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Local</span>
@@ -34,7 +35,9 @@
         <span class="input-label">Descrição</span>
         <textarea id="textAreaMultLine" ng-model="nanuncio.descricao"></textarea>
       </label>
+      <label class="item-input item-stacked-label">
         <span class="input-label">Tags</span>
+      </label>
         <div class="item-input" ng-repeat="item in inputs">
           <label class="item item-input item-stacked-label">
               <input id="tag-{{$index}}" type="text" placeholder="Ex: Brigadeiro"

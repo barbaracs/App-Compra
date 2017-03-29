@@ -14,7 +14,25 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
   $scope.removefield = function(index) {
     $scope.inputs.splice(index, 1);
   }
-  //CADASTRO DE USUARIO
+
+  //Titulo somente letras
+  $scope.onlyLetters = function() {
+    var e = event || window.event;  // get event object
+    var key = e.keyCode || e.which; // get key cross-browser
+
+    if ( (key == 32)  ||
+        ((key >  64)  && (key < 91))  ||
+        ((key >  96)  && (key < 123)) ||
+         (key == 199) ||
+         (key == 231))
+    {} else {
+        //caso o character ascii nao for uma letra ou espaço bloqueia a açao
+        if (e.preventDefault) e.preventDefault(); //normal browsers
+            e.returnValue = false; //IE
+    }
+  };
+
+  //CADASTRO DE ANUNCIO
   $scope.novoAnuncio = function() {
 
     var tag = [];
@@ -36,8 +54,6 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
       }
     });
 
-
-    //console.log(datNAnuncio);
     $http({
       method: 'POST',
       url: 'http://localhost:3000/cadastro/anuncio',
@@ -54,6 +70,7 @@ angular.module('starter.controllers').controller('CtrlNovoAnuncio', function($sc
         var info = $.param({
           tag: tag[i]
         });
+
         $http({
           method: 'POST',
           url: 'http://localhost:3000/cadastro/tags',
