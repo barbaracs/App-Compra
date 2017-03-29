@@ -4,9 +4,13 @@
     <img class="title-image" src="../img/logo.jpg" id="logoBarra" />
   </ion-nav-buttons>
   <ion-content>
-    <h2>Welcome to Ionic</h2>
-  <p>
-  This is the Ionic
-  </p>
+    <ion-list>
+      <ion-checkbox ng-model="filter.red">Brigadeiro</ion-checkbox>
+      <ion-checkbox ng-model="filter.yellow">Bolo</ion-checkbox>
+      <ion-checkbox ng-model="filter.pink">Panqueca</ion-checkbox>
+    </ion-list>
   </ion-content>
+  <div class="bar bar-footer">
+    <button class="button button-block button-dark">Pesquisar</button>
+  </div>
 </ion-view>
