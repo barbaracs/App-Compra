@@ -20,23 +20,26 @@
     <ion-content>
           <img src="../img/logo.jpg" id="imgLogo">
       <ion-list>
-        <ion-item menu-close ng-click="login()">
+        <ion-item ng-show="!logado" menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item menu-close href="#/app/cadastrar">
+        <ion-item ng-show="!logado" menu-close href="#/app/cadastrar">
           Cadastre-se
         </ion-item>
         <ion-item menu-close href="#/app/anuncios/hoje">
           Anuncios
         </ion-item>
-        <ion-item menu-close href="#/app/meusAnuncios">
+        <ion-item ng-show="logado" menu-close href="#/app/meusAnuncios">
           Meus Anúncios
         </ion-item>
-        <ion-item menu-close href="#/app/inserirAnuncio">
+        <ion-item ng-show="logado" menu-close href="#/app/inserirAnuncio">
           Novo Anuncio
         </ion-item>
         <ion-item menu-close href="#/app/sobre">
           Sobre
+        </ion-item>
+        <ion-item menu-close href="#/app/profile">
+          Profile
         </ion-item>
       </ion-list>
     </ion-content>

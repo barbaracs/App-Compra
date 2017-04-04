@@ -8,13 +8,15 @@
       <div class="usuario">
         <h5>Usuário</h5>
         <label class="item item-input">
-          <input type="text" placeholder="Usuário">
+          <input type="text" placeholder="Usuário" ng-model="login.usu">
         </label>
       </div>
       <div class="senha">
         <h5>Senha</h5>
-        <label class="item item-input">
-          <input type="text" placeholder="Senha">
+        <label class="item item-input item-icon-right">
+          <a class="icon ion-eye zoinho" id="zoinho" on-touch="showPassword=!showPassword" on-tap="highlightSenha(showPassword)"></a>
+          <input type="password" id="password" placeholder="Senha" ng-model="login.senha" ng-hide="showPassword">
+          <input type="text" placeholder="Senha" ng-model="login.senha" ng-show="showPassword">
         </label>
       </div>
       <div class="botao-entrar">
@@ -23,6 +25,31 @@
       <div class="botao-cadastrar">
         <a class="button button-clear button-positive" ng-click="closeLogin()" href="#/app/cadastrar">Cadastrar-se</a>
       </div>
+      <label class="item">
+        <button class="button button-block button-positive" ng-click="fbLogin()">
+          Login with Facebook
+        </button>
+      </label>
     </div>
   </ion-content>
 </ion-modal-view>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- <ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear icon-left ion-arrow-left-c" menu-close ng-click="closeLogin()"></button>
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+
+
+    <div class="botao-facebook-padding">
+      <button class="button button-block ion-social-facebook botao-facebook"  ng-click="fbLogin()">
+        Entrar com Facebook
+      </button>
+    </div>
+
+  </ion-content>
+</ion-modal-view> -->

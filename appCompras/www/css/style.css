@@ -69,6 +69,18 @@ utilização de multiplas linhas*/
   padding-right: 110px;
   padding-top: 20px;
 }
+.botao-facebook-padding{
+  padding-bottom: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 150px;
+}
+.botao-facebook{
+  color: white;
+  background: #3b5998;
+}
+
+
 .usuario{
   padding-bottom: 0px;
   padding-left: 40px;
@@ -80,6 +92,9 @@ utilização de multiplas linhas*/
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 20px;
+}
+.zoinho{
+  color: grey;
 }
 
 /*MeusAnuncios---------------------------------*/

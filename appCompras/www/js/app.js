@@ -4,9 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic','starter.controllers','starter.services'])
+var app = angular.module('starter', ['ionic','starter.controllers','starter.services', 'ngOpenFB'])
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform, ngFB) {
+  ngFB.init({appId: '264534557339493'});
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -32,11 +33,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller: 'AppCtrl'
   })
 
+  .state('app.profile', {
+      url: '/profile',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/profile.html',
+          controller: 'ProfileCtrl'
+        }
+      }
+    })
+
   .state('app.login', {
       url: '/login',
       views: {
         'menuContent': {
-          templateUrl: 'templates/login.html'
+          templateUrl: 'templates/login.html',
+          controller: 'CtrlLogin'
         }
       }
     })
