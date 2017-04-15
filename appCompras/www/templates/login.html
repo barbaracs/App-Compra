@@ -19,17 +19,20 @@
           <input type="text" placeholder="Senha" ng-model="login.senha" ng-show="showPassword">
         </label>
       </div>
+      <div class="login-fail" ng-show="loginfail">
+        <p style="color:rgb(255,0,0); font-size:110%;">Usuario ou senha incorretos</p>
+      </div>
       <div class="botao-entrar">
-        <button class="button button-large icon-right ion-chevron-right button-calm" ng-click="doLogin()">Entrar</button>
+        <button class="button button-block icon-right ion-chevron-right button-calm" ng-click="doLogin()">Entrar</button>
       </div>
       <div class="botao-cadastrar">
         <a class="button button-clear button-positive" ng-click="closeLogin()" href="#/app/cadastrar">Cadastrar-se</a>
       </div>
-      <label class="item">
-        <button class="button button-block button-positive" ng-click="fbLogin()">
-          Login with Facebook
+      <div class="botao-facebook-padding">
+        <button class="button button-block ion-social-facebook botao-facebook"  ng-click="fbLogin()">
+          Entrar com Facebook
         </button>
-      </label>
+      </div>
     </div>
   </ion-content>
 </ion-modal-view>
@@ -45,11 +48,7 @@
   <ion-content>
 
 
-    <div class="botao-facebook-padding">
-      <button class="button button-block ion-social-facebook botao-facebook"  ng-click="fbLogin()">
-        Entrar com Facebook
-      </button>
-    </div>
+
 
   </ion-content>
 </ion-modal-view> -->

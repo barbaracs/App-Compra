@@ -30,7 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'CtrlLogin'
   })
 
   .state('app.profile', {
